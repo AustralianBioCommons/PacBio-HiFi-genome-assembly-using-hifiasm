@@ -1,8 +1,10 @@
-PacBio-HiFi-genome-assembly-using-hifiasm
+PacBio HiFi genome assembly using hifiasm v2.1
 ==============
 
-## General recommendations for using `PacBio-HiFi-genome-assembly-using-hifiasm`
-Please see the [`Genome assembly with hifiasm on Galaxy Australia`](https://australianbiocommons.github.io/how-to-guides/genome_assembly/hifi_assembly) guide.
+## General usage recommendations
+Please see the [Genome assembly with hifiasm on Galaxy Australia](https://australianbiocommons.github.io/how-to-guides/genome_assembly/hifi_assembly) guide.
+
+## See [change log](./change_log.md)
 
 ## Acknowledgements
 

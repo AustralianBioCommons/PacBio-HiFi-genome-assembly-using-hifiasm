@@ -6,11 +6,16 @@
             "class": "Person",
             "identifier": "",
             "name": "Gareth Price"
+        },
+        {
+            "class": "Person",
+            "identifier": "https://orcid.org/0000-0002-9009-7453",
+            "name": "Katherine Farquharson"
         }
     ],
     "format-version": "0.1",
     "license": "GPL-3.0-or-later",
-    "name": "PacBio HiFi genome assembly using hifiasm v2.0",
+    "name": "PacBio HiFi genome assembly using hifiasm v2.1",
     "report": {
         "markdown": "\n# Workflow Report\n\nTest Language Output - Gareth is excited\n\n```galaxy\ngenerate_galaxy_version()\n```\n\n```galaxy\ngenerate_time()\n```\n\nBandage Graph of Primary HiFiASM result\n```galaxy\nhistory_dataset_as_image(output=\"PrimaryHifiASM\")\n```\n\nI'd like to see final FASTA metrics\n\n\n```galaxy\nhistory_dataset_peek(output=\"metrics\")\n```\nGareth is very happy\n"
     },
@@ -31,14 +36,8 @@
             "name": "Input dataset",
             "outputs": [],
             "position": {
-                "bottom": 784.3416442871094,
-                "height": 48.633331298828125,
-                "left": 530.2708435058594,
-                "right": 690.2708435058594,
-                "top": 735.7083129882812,
-                "width": 160,
-                "x": 530.2708435058594,
-                "y": 735.7083129882812
+                "left": 0,
+                "top": 529.6666870117188
             },
             "tool_id": null,
             "tool_state": "{\"optional\": false, \"tag\": \"\"}",
@@ -58,12 +57,7 @@
                     "output_name": "output"
                 }
             },
-            "inputs": [
-                {
-                    "description": "runtime parameter for tool HiFi Adapter Filter",
-                    "name": "input_file"
-                }
-            ],
+            "inputs": [],
             "label": null,
             "name": "HiFi Adapter Filter",
             "outputs": [
@@ -85,14 +79,8 @@
                 }
             ],
             "position": {
-                "bottom": 951.4000549316406,
-                "height": 309.6500244140625,
-                "left": 876.5000152587891,
-                "right": 1036.500015258789,
-                "top": 641.7500305175781,
-                "width": 160,
-                "x": 876.5000152587891,
-                "y": 641.7500305175781
+                "left": 346.23333740234375,
+                "top": 435.7166748046875
             },
             "post_job_actions": {},
             "tool_id": "toolshed.g2.bx.psu.edu/repos/galaxy-australia/hifiadapterfilt/hifiadapterfilt/2.0.0+galaxy0",
@@ -102,36 +90,36 @@
                 "owner": "galaxy-australia",
                 "tool_shed": "toolshed.g2.bx.psu.edu"
             },
-            "tool_state": "{\"input_file\": {\"__class__\": \"RuntimeValue\"}, \"match_length\": \"44\", \"match_percentage\": \"97\", \"__page__\": null, \"__rerun_remap_job_id__\": null}",
+            "tool_state": "{\"input_file\": {\"__class__\": \"ConnectedValue\"}, \"match_length\": \"44\", \"match_percentage\": \"97\", \"__page__\": null, \"__rerun_remap_job_id__\": null}",
             "tool_version": "2.0.0+galaxy0",
             "type": "tool",
             "uuid": "2131a1c7-2a2c-47eb-b753-31ac346a1791",
             "workflow_outputs": [
                 {
-                    "label": "HiFi Adapter Filter on input dataset(s): contaminant statistic",
-                    "output_name": "stats",
-                    "uuid": "a755468c-713d-4ca2-86c9-6b9593cd43f0"
+                    "label": "HiFi Adapter Filter on input dataset(s): clean reads",
+                    "output_name": "cleanfastq",
+                    "uuid": "8ae12bb3-90ee-4e38-82a9-e8610e73b934"
                 },
                 {
-                    "label": "HiFi Adapter Filter on input dataset(s): blocklist",
-                    "output_name": "blocklist",
-                    "uuid": "04692147-042b-4d2a-a0b6-b46bc19dc6c7"
+                    "label": "HiFi Adapter Filter on input dataset(s): contaminant statistic",
+                    "output_name": "stats",
+                    "uuid": "962fda74-da6d-408e-9194-477238ec59ea"
                 },
                 {
                     "label": "HiFi Adapter Filter on input dataset(s): contaminant blastout",
                     "output_name": "blastout",
-                    "uuid": "ca5ead3d-62a2-4b8c-b93f-559149185911"
+                    "uuid": "57ff2080-44be-4470-91b9-78f48488797e"
                 },
                 {
-                    "label": "HiFi Adapter Filter on input dataset(s): clean reads",
-                    "output_name": "cleanfastq",
-                    "uuid": "f0a2ece3-e76c-43e6-8a2b-cb2b56293164"
+                    "label": "HiFi Adapter Filter on input dataset(s): blocklist",
+                    "output_name": "blocklist",
+                    "uuid": "7cfe7a9c-4a30-43a9-9dc5-95bd77a07713"
                 }
             ]
         },
         "2": {
             "annotation": "",
-            "content_id": "toolshed.g2.bx.psu.edu/repos/bgruening/hifiasm/hifiasm/0.15.4+galaxy0",
+            "content_id": "toolshed.g2.bx.psu.edu/repos/bgruening/hifiasm/hifiasm/0.16.1+galaxy3",
             "errors": null,
             "id": 2,
             "input_connections": {
@@ -140,12 +128,7 @@
                     "output_name": "cleanfastq"
                 }
             },
-            "inputs": [
-                {
-                    "description": "runtime parameter for tool Hifiasm",
-                    "name": "mode"
-                }
-            ],
+            "inputs": [],
             "label": "hifiasm assembly",
             "name": "Hifiasm",
             "outputs": [
@@ -167,14 +150,8 @@
                 }
             ],
             "position": {
-                "bottom": 953.4041900634766,
-                "height": 325.9666748046875,
-                "left": 1170.5833435058594,
-                "right": 1330.5833435058594,
-                "top": 627.4375152587891,
-                "width": 160,
-                "x": 1170.5833435058594,
-                "y": 627.4375152587891
+                "left": 640.316650390625,
+                "top": 421.4000244140625
             },
             "post_job_actions": {
                 "HideDatasetActionalternate_contig_graph": {
@@ -226,15 +203,15 @@
                     "output_name": "raw_unitigs"
                 }
             },
-            "tool_id": "toolshed.g2.bx.psu.edu/repos/bgruening/hifiasm/hifiasm/0.15.4+galaxy0",
+            "tool_id": "toolshed.g2.bx.psu.edu/repos/bgruening/hifiasm/hifiasm/0.16.1+galaxy3",
             "tool_shed_repository": {
-                "changeset_revision": "9ef6920c3089",
+                "changeset_revision": "366a11d316a7",
                 "name": "hifiasm",
                 "owner": "bgruening",
                 "tool_shed": "toolshed.g2.bx.psu.edu"
             },
-            "tool_state": "{\"advanced_options\": {\"advanced_selector\": \"blank\", \"__current_case__\": 0}, \"assembly_options\": {\"assembly_selector\": \"blank\", \"__current_case__\": 0}, \"filter_bits\": \"37\", \"hic_partition\": {\"hic_partition_selector\": \"blank\", \"__current_case__\": 0}, \"log_out\": \"false\", \"mode\": {\"mode_selector\": \"standard\", \"__current_case__\": 0, \"reads\": {\"__class__\": \"RuntimeValue\"}}, \"purge_options\": {\"purge_selector\": \"blank\", \"__current_case__\": 0}, \"__page__\": null, \"__rerun_remap_job_id__\": null}",
-            "tool_version": "0.15.4+galaxy0",
+            "tool_state": "{\"advanced_options\": {\"advanced_selector\": \"blank\", \"__current_case__\": 0}, \"assembly_options\": {\"assembly_selector\": \"blank\", \"__current_case__\": 0}, \"filter_bits\": \"37\", \"hic_partition\": {\"hic_partition_selector\": \"blank\", \"__current_case__\": 0}, \"log_out\": \"false\", \"mode\": {\"mode_selector\": \"standard\", \"__current_case__\": 0, \"reads\": {\"__class__\": \"ConnectedValue\"}}, \"purge_options\": {\"purge_selector\": \"blank\", \"__current_case__\": 0}, \"__page__\": null, \"__rerun_remap_job_id__\": null}",
+            "tool_version": "0.16.1+galaxy3",
             "type": "tool",
             "uuid": "d1d38547-63b9-4561-8691-22270e5e9e26",
             "workflow_outputs": []
@@ -260,14 +237,8 @@
                 }
             ],
             "position": {
-                "bottom": 353.14166259765625,
-                "height": 138.76666259765625,
-                "left": 1468.0624389648438,
-                "right": 1628.0624389648438,
-                "top": 214.375,
-                "width": 160,
-                "x": 1468.0624389648438,
-                "y": 214.375
+                "left": 937.7833251953125,
+                "top": 8.333328247070312
             },
             "post_job_actions": {
                 "HideDatasetActionoutfile": {
@@ -310,14 +281,8 @@
                 }
             ],
             "position": {
-                "bottom": 541.0583190917969,
-                "height": 138.7666778564453,
-                "left": 1469.7917175292969,
-                "right": 1629.7917175292969,
-                "top": 402.29164123535156,
-                "width": 160,
-                "x": 1469.7917175292969,
-                "y": 402.29164123535156
+                "left": 939.5166015625,
+                "top": 196.25
             },
             "post_job_actions": {
                 "HideDatasetActionoutfile": {
@@ -360,14 +325,8 @@
                 }
             ],
             "position": {
-                "bottom": 344.8083381652832,
-                "height": 138.7666778564453,
-                "left": 1724.7917175292969,
-                "right": 1884.7917175292969,
-                "top": 206.0416603088379,
-                "width": 160,
-                "x": 1724.7917175292969,
-                "y": 206.0416603088379
+                "left": 1194.5166015625,
+                "top": 0.0
             },
             "post_job_actions": {
                 "HideDatasetActionoutfile": {
@@ -410,14 +369,8 @@
                 }
             ],
             "position": {
-                "bottom": 532.3083190917969,
-                "height": 138.7666778564453,
-                "left": 1727.5833129882812,
-                "right": 1887.5833129882812,
-                "top": 393.54164123535156,
-                "width": 160,
-                "x": 1727.5833129882812,
-                "y": 393.54164123535156
+                "left": 1197.316650390625,
+                "top": 187.5
             },
             "post_job_actions": {
                 "HideDatasetActionoutfile": {
@@ -460,14 +413,8 @@
                 }
             ],
             "position": {
-                "bottom": 1123.3082885742188,
-                "height": 138.76666259765625,
-                "left": 1515.916748046875,
-                "right": 1675.916748046875,
-                "top": 984.5416259765625,
-                "width": 160,
-                "x": 1515.916748046875,
-                "y": 984.5416259765625
+                "left": 985.6500244140625,
+                "top": 778.5
             },
             "post_job_actions": {
                 "HideDatasetActionoutfile": {
@@ -517,14 +464,8 @@
                 }
             ],
             "position": {
-                "bottom": 699.4249954223633,
-                "height": 106.13333129882812,
-                "left": 1775.4167175292969,
-                "right": 1935.4167175292969,
-                "top": 593.2916641235352,
-                "width": 160,
-                "x": 1775.4167175292969,
-                "y": 593.2916641235352
+                "left": 1245.1500244140625,
+                "top": 387.25
             },
             "post_job_actions": {},
             "tool_id": "toolshed.g2.bx.psu.edu/repos/iuc/bandage/bandage_info/0.8.1+galaxy1",
@@ -542,65 +483,15 @@
                 {
                     "label": "primary bandage info",
                     "output_name": "outfile",
-                    "uuid": "ead8fe82-6543-4ae1-b4b5-a0086b109271"
+                    "uuid": "4a73f0b3-b8e9-4895-a4a2-5899304ea076"
                 }
             ]
         },
         "9": {
             "annotation": "",
-            "content_id": "toolshed.g2.bx.psu.edu/repos/iuc/bandage/bandage_image/0.8.1+galaxy3",
-            "errors": null,
-            "id": 9,
-            "input_connections": {
-                "input_file": {
-                    "id": 2,
-                    "output_name": "alternate_contig_graph"
-                }
-            },
-            "inputs": [],
-            "label": "Alternate assembly Bandage image",
-            "name": "Bandage Image",
-            "outputs": [
-                {
-                    "name": "outfile",
-                    "type": "jpg"
-                }
-            ],
-            "position": {
-                "bottom": 1309.3916625976562,
-                "height": 138.76666259765625,
-                "left": 1515.916748046875,
-                "right": 1675.916748046875,
-                "top": 1170.625,
-                "width": 160,
-                "x": 1515.916748046875,
-                "y": 1170.625
-            },
-            "post_job_actions": {
-                "HideDatasetActionoutfile": {
-                    "action_arguments": {},
-                    "action_type": "HideDatasetAction",
-                    "output_name": "outfile"
-                }
-            },
-            "tool_id": "toolshed.g2.bx.psu.edu/repos/iuc/bandage/bandage_image/0.8.1+galaxy3",
-            "tool_shed_repository": {
-                "changeset_revision": "b9e31c5c01c7",
-                "name": "bandage",
-                "owner": "iuc",
-                "tool_shed": "toolshed.g2.bx.psu.edu"
-            },
-            "tool_state": "{\"fontsize\": null, \"height\": \"1000\", \"input_file\": {\"__class__\": \"ConnectedValue\"}, \"lengths\": \"false\", \"names\": \"false\", \"output_format\": \"jpg\", \"width\": null, \"__page__\": null, \"__rerun_remap_job_id__\": null}",
-            "tool_version": "0.8.1+galaxy3",
-            "type": "tool",
-            "uuid": "8b0c2396-d7b7-4af4-b76c-bfd61a1d9caa",
-            "workflow_outputs": []
-        },
-        "10": {
-            "annotation": "",
             "content_id": "toolshed.g2.bx.psu.edu/repos/iuc/gfa_to_fa/gfa_to_fa/0.1.2",
             "errors": null,
-            "id": 10,
+            "id": 9,
             "input_connections": {
                 "in_gfa": {
                     "id": 2,
@@ -617,14 +508,8 @@
                 }
             ],
             "position": {
-                "bottom": 864.5916595458984,
-                "height": 106.13333129882812,
-                "left": 1775.5833435058594,
-                "right": 1935.5833435058594,
-                "top": 758.4583282470703,
-                "width": 160,
-                "x": 1775.5833435058594,
-                "y": 758.4583282470703
+                "left": 1245.316650390625,
+                "top": 552.4166870117188
             },
             "post_job_actions": {
                 "RenameDatasetActionout_fa": {
@@ -650,9 +535,53 @@
                 {
                     "label": "converted FASTA",
                     "output_name": "out_fa",
-                    "uuid": "b9c58eaf-31b7-4c3c-836f-94663e529f8f"
+                    "uuid": "1ec820ce-6a48-42cc-82e2-4a8ca7bf3742"
                 }
             ]
+        },
+        "10": {
+            "annotation": "",
+            "content_id": "toolshed.g2.bx.psu.edu/repos/iuc/bandage/bandage_image/0.8.1+galaxy3",
+            "errors": null,
+            "id": 10,
+            "input_connections": {
+                "input_file": {
+                    "id": 2,
+                    "output_name": "alternate_contig_graph"
+                }
+            },
+            "inputs": [],
+            "label": "Alternate assembly Bandage image",
+            "name": "Bandage Image",
+            "outputs": [
+                {
+                    "name": "outfile",
+                    "type": "jpg"
+                }
+            ],
+            "position": {
+                "left": 985.6500244140625,
+                "top": 964.5833740234375
+            },
+            "post_job_actions": {
+                "HideDatasetActionoutfile": {
+                    "action_arguments": {},
+                    "action_type": "HideDatasetAction",
+                    "output_name": "outfile"
+                }
+            },
+            "tool_id": "toolshed.g2.bx.psu.edu/repos/iuc/bandage/bandage_image/0.8.1+galaxy3",
+            "tool_shed_repository": {
+                "changeset_revision": "b9e31c5c01c7",
+                "name": "bandage",
+                "owner": "iuc",
+                "tool_shed": "toolshed.g2.bx.psu.edu"
+            },
+            "tool_state": "{\"fontsize\": null, \"height\": \"1000\", \"input_file\": {\"__class__\": \"ConnectedValue\"}, \"lengths\": \"false\", \"names\": \"false\", \"output_format\": \"jpg\", \"width\": null, \"__page__\": null, \"__rerun_remap_job_id__\": null}",
+            "tool_version": "0.8.1+galaxy3",
+            "type": "tool",
+            "uuid": "8b0c2396-d7b7-4af4-b76c-bfd61a1d9caa",
+            "workflow_outputs": []
         },
         "11": {
             "annotation": "",
@@ -675,14 +604,8 @@
                 }
             ],
             "position": {
-                "bottom": 1024.5750122070312,
-                "height": 122.44999694824219,
-                "left": 1777.0832824707031,
-                "right": 1937.0832824707031,
-                "top": 902.1250152587891,
-                "width": 160,
-                "x": 1777.0832824707031,
-                "y": 902.1250152587891
+                "left": 1246.816650390625,
+                "top": 696.0833129882812
             },
             "post_job_actions": {},
             "tool_id": "toolshed.g2.bx.psu.edu/repos/iuc/bandage/bandage_image/0.8.1+galaxy3",
@@ -700,7 +623,7 @@
                 {
                     "label": "primary bandage image",
                     "output_name": "outfile",
-                    "uuid": "d3207fc5-8551-4006-aefc-6360c466ece8"
+                    "uuid": "1e55ab8b-93a3-48ca-bd05-1c533853e5b2"
                 }
             ]
         },
@@ -711,7 +634,7 @@
             "id": 12,
             "input_connections": {
                 "dataset": {
-                    "id": 10,
+                    "id": 9,
                     "output_name": "out_fa"
                 }
             },
@@ -725,14 +648,8 @@
                 }
             ],
             "position": {
-                "bottom": 953.4416961669922,
-                "height": 89.81666564941406,
-                "left": 2090.604248046875,
-                "right": 2250.604248046875,
-                "top": 863.6250305175781,
-                "width": 160,
-                "x": 2090.604248046875,
-                "y": 863.6250305175781
+                "left": 1560.3333740234375,
+                "top": 657.5833129882812
             },
             "post_job_actions": {},
             "tool_id": "toolshed.g2.bx.psu.edu/repos/iuc/fasta_stats/fasta-stats/1.0.3",
@@ -750,7 +667,7 @@
                 {
                     "label": "metrics",
                     "output_name": "stats",
-                    "uuid": "e4628113-7c1e-4c80-8d7f-23c16abc808b"
+                    "uuid": "38f7875b-7794-41b8-9783-cbb81a82ef3f"
                 }
             ]
         }
@@ -761,6 +678,6 @@
         "HiFi",
         "genome_assembly"
     ],
-    "uuid": "d077bbee-77cd-4bab-8881-f63daa0d337d",
-    "version": 32
+    "uuid": "dc4571d6-e513-4f49-a86c-f597b75c948a",
+    "version": 3
 }

@@ -1,5 +1,12 @@
 # Change log
 
+## v2.1.0
+
+- Workflow updated to use [hifiasm](https://bio.tools/hifiasm) v0.16.1
+- Thanks for the suggestion @awgg-lab
+- Added creator
+- Updated CITATION.cff
+
 ## v2.0.0
 
 - Added [HiFiAdapterFilt](https://bio.tools/hifiadapterfilt) following feedback 
