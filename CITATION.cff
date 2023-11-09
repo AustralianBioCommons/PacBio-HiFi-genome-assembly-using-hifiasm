@@ -9,5 +9,5 @@ authors:
     orcid: "https://orcid.org/0000-0002-9009-7453"
 title: "PacBio-HiFi-genome-assembly-using-hifiasm"
 version: 2.1.0
-doi: [DOI goes here]
+doi: 10.48546/WORKFLOWHUB.WORKFLOW.221.3
 date-released: 2022-10-21
