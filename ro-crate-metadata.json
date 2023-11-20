@@ -1,0 +1,87 @@
+{
+    "@context": "https://w3id.org/ro/crate/1.1/context",
+    "@graph": [
+        {
+            "@id": "./",
+            "@type": "Dataset",
+            "datePublished": "2023-11-20T00:17:50+00:00",
+            "hasPart": [
+                {
+                    "@id": "Galaxy-Workflow-PacBio_HiFi_genome_assembly_using_hifiasm_v2.1.ga"
+                },
+                {
+                    "@id": "README.md"
+                }
+            ],
+            "isBasedOn": "https://github.com/AustralianBioCommons/PacBio-HiFi-genome-assembly-using-hifiasm.git",
+            "license": "NOASSERTION",
+            "mainEntity": {
+                "@id": "Galaxy-Workflow-PacBio_HiFi_genome_assembly_using_hifiasm_v2.1.ga"
+            },
+            "name": "PacBio-HiFi-genome-assembly-using-hifiasm"
+        },
+        {
+            "@id": "ro-crate-metadata.json",
+            "@type": "CreativeWork",
+            "about": {
+                "@id": "./"
+            },
+            "conformsTo": [
+                {
+                    "@id": "https://w3id.org/ro/crate/1.1"
+                },
+                {
+                    "@id": "https://w3id.org/workflowhub/workflow-ro-crate/1.0"
+                }
+            ]
+        },
+        {
+            "@id": "Galaxy-Workflow-PacBio_HiFi_genome_assembly_using_hifiasm_v2.1.ga",
+            "@type": [
+                "File",
+                "SoftwareSourceCode",
+                "ComputationalWorkflow"
+            ],
+            "creator": [
+                {
+                    "@id": "#b363c0d0-b544-4deb-994f-dc531e6e58a4"
+                },
+                {
+                    "@id": "https://orcid.org/0000-0002-9009-7453"
+                }
+            ],
+            "name": "PacBio-HiFi-genome-assembly-using-hifiasm",
+            "programmingLanguage": {
+                "@id": "https://w3id.org/workflowhub/workflow-ro-crate#galaxy"
+            },
+            "url": "https://github.com/AustralianBioCommons/PacBio-HiFi-genome-assembly-using-hifiasm.git",
+            "version": "main"
+        },
+        {
+            "@id": "https://w3id.org/workflowhub/workflow-ro-crate#galaxy",
+            "@type": "ComputerLanguage",
+            "identifier": {
+                "@id": "https://galaxyproject.org/"
+            },
+            "name": "Galaxy",
+            "url": {
+                "@id": "https://galaxyproject.org/"
+            }
+        },
+        {
+            "@id": "#b363c0d0-b544-4deb-994f-dc531e6e58a4",
+            "@type": "Person",
+            "name": "Gareth Price"
+        },
+        {
+            "@id": "https://orcid.org/0000-0002-9009-7453",
+            "@type": "Person",
+            "name": "Katherine Farquharson"
+        },
+        {
+            "@id": "README.md",
+            "@type": "File",
+            "description": "Workflow documentation"
+        }
+    ]
+}
